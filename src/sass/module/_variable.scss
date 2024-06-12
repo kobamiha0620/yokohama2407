@@ -1,0 +1,58 @@
+$basic: #444444;
+$yel: #FFFCC9;
+$green: #45AD75;
+$orange: #FFCD7B;
+$pink: #F7C9DD;
+$red: #E4097F;
+$dyel: #FFF655;
+$blue: #51C0FF;
+
+
+$spbp: 768px;
+$pcbp: 700px;
+
+$imgpath : '../img/';
+
+@mixin bg(){
+    background-size: 100% auto;
+    white-space: nowrap;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    display: block;
+}
+@mixin fz($size) {
+	font-size: calc($size / 16) + rem;
+}
+
+@keyframes fadeInAnime{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+// ## webp classes
+$webpClassName: '.is-webp';
+$noWebpClassName: '.is-no-webp';
+
+// $selector にする background-image で、webp を出し分ける
+// ※親要素に $webpClassName / $noWebpClassName が付与されることが前提
+// --------------------------------------------------------
+// $selector      {string} css セレクタ (default: jpg)
+// $imgpath      {string} 背景画像ファイルパス
+// $fileExtension {string} 背景画像拡張子
+@mixin webpBg($selector, $imgpath, $fileExtension: 'jpg') {
+  #{$noWebpClassName} #{$selector} {
+    background-image: url(#{$imgpath}.#{$fileExtension});
+  }
+  #{$webpClassName} #{$selector} {
+    background-image: url(#{$imgpath}.webp);
+  }
+}
+

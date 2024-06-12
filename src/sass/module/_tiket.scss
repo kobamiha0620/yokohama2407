@@ -1,0 +1,455 @@
+@use "./module/variable"as var;
+
+
+
+.tiket{
+    background-color: var.$blue;
+    .blc__inner{
+        padding: 57px 0;
+        position: relative;
+    }
+    &__tokuten{
+        background: var.$pink;
+        .tiket__blc{
+            padding-bottom: 54px;
+        }
+        &--subttl{
+            font-weight: 700;
+            text-align: center;
+            @include var.fz(20);
+            line-height: 1.5;
+            letter-spacing: 1px;
+            margin: 0 auto 12px;
+            // padding-top: 68px;
+            width: 80%;
+            padding: 10px;
+        }
+        &--img{
+            background-color: #F9D7E6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 275px;
+            height: 200px;
+            margin: 0 auto 50px;
+            img{
+                width: 200px;
+                height: auto;
+            }
+        }
+        &--txt{
+            text-align: center;
+            @include var.fz(16);
+            letter-spacing: 1px;
+            margin: 0 auto;
+            width: 420px;
+        }
+        &--note{
+            text-align: center;
+            @include var.fz(12);
+            letter-spacing: 1px;
+            margin: 0 auto;
+        }
+    }
+    &__notes{
+        font-weight: 700;
+        text-align: center;
+        @include var.fz(16);
+        letter-spacing: 1px;
+        margin: 0 auto 32px;
+    }
+    &__ttl{
+        text-indent: -9999px;
+        white-space: nowrap;
+        width: 236px;
+        height: 52px;
+        background-size: 100% auto;
+        margin: 0 auto 36px;
+        letter-spacing: 1px;
+    }
+    &__chara{
+        font-size: 0;
+        position: absolute;
+        top: -26px;
+        left: 0;
+        img{
+            width: 126px;
+            height: auto;
+        }
+    }
+    &__neko{
+        position: absolute;
+        right: 0;
+        bottom: -33px;
+        img{
+            width: 125px;
+            height: auto;
+        }
+    }
+    &__tab{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        li{
+            list-style-type: none;
+            text-align: center;
+            @include var.fz(20);
+            font-weight: 900;
+            width: 50%;
+            padding: 10px 0;
+            cursor: pointer;
+            
+            &:first-child{
+                background-color: var.$dyel;
+            }
+            &:nth-child(2){
+                background-color: var.$pink;
+            }
+            &.active{
+                cursor: auto;
+            }
+        }
+        &main{
+            width: 100%;
+            margin: 0;
+            font-size: 0;
+            padding: 0;
+
+            li{
+                font-size: 0;
+                min-height: 700px;
+                position: relative;
+                padding: 68px 98px 58px;
+                display: none;
+                &.yel{
+                    background-color: var.$dyel;
+                    margin: 0;
+                }
+                &.active{
+                    display: block;
+                }
+            }
+
+        }
+    }
+
+    &__blc{
+        position: relative;
+        border: solid 5px #000;
+        border-radius: 20px;
+        background-color: #FFF;
+        margin: 0 auto 30px;
+        &--ttl{
+            width: 207px;
+            height: 54px;
+            white-space: nowrap;
+            text-indent: -9999px;
+            position: absolute;
+            top: -27px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            display: flex;
+            background-size: 100% auto;
+            align-items: center;
+        }
+        &--small{
+            padding: 20px 0 0;
+            margin: 0 auto;
+            &-wrap{
+                border-bottom: solid 1px #000;
+                margin: 0 auto 25px;
+                width: 356px;
+                padding-top: 40px;
+                padding-bottom: 20px;
+            }
+
+            &ttl{
+                color: var.$red;
+                text-align: center;
+                @include var.fz(20);
+                line-height: 1.2;
+                font-weight: 900;
+                margin: 0;
+                letter-spacing: 0.1em;
+            }
+            &txt{
+                @include var.fz(14);
+                line-height: 1.6;
+                text-align: center;
+                margin: 10px auto 0;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    &__blc2{
+        padding-bottom: 33px;
+    }
+
+    &__subttl{
+        text-align: center;
+        @include var.fz(14);
+        line-height: 1.8;
+        margin: 0;
+    }
+    &__subtxt{
+        text-align: center;
+        @include var.fz(14);
+        line-height: 1.8;
+        margin: 0;
+    }
+    &__txt{
+        // text-align: center;
+        @include var.fz(12);
+        line-height: 1.6;
+        margin: 0 auto;
+        max-width: 356px;
+        padding-left: 1em;
+        text-indent: -1em;
+    }
+    &__txt2{
+        text-align: center;
+        @include var.fz(10);
+        line-height: 1.4;
+        padding-bottom: 0;
+        margin: 8px auto 0;
+        letter-spacing: 0;
+        &.red{
+            color: var.$red;    
+        }
+        &.left{
+            text-align: left;
+        }
+        &.indent{
+            padding-left: 1em;
+        }
+    }
+    &__txt3{
+        text-align: left;
+        text-indent:  -1em;
+        padding-left: 1em;
+        @include var.fz(10);
+        line-height: 1.4;
+        &--note{
+            padding-left: 1em;
+            @include var.fz(10);
+
+        }
+    }
+
+    &__lowson{
+        background-color: var.$red;
+        border-radius: 40px;
+        @include var.fz(16);
+        font-weight: 800;
+        color: #FFF;
+        text-decoration: none;
+        margin: 0 auto;
+        display: inline-block;
+        padding: 8px 53px 10px 27px;
+        line-height: 24px;
+        background-image: url('../img/map.svg');
+        background-repeat: no-repeat;
+        background-position: right 16px top 8px;
+        background-size: 23px 23px;
+
+        &--wrap{
+            display: flex;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+        &:hover{
+            opacity: 0.7;
+        }
+        &.disable{
+            background: var.$red    ;
+            padding-right: 27px;
+            padding-top: 10px;
+            letter-spacing: 1px;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    //access
+    @media screen and (max-width: var.$spbp) {
+        .blc__inner{
+            padding: 16.5vw 4vw;
+        }
+        &__tokuten{
+            .tiket__blc{
+                padding-bottom: 8.3vw;
+            }
+            &--subttl{
+                letter-spacing: 0;
+                margin: 0 auto 8vw;
+                padding-top: 15.2vw;
+
+
+            }
+            &--img{
+                width: 43.2vw;
+                height: 42.1vw;
+                margin: 0 auto 12.5vw;
+                img{
+                    width: 38vw;
+                    height: auto;
+                }
+            }
+            &--txt{
+                text-align: center;
+                @include var.fz(16);
+                letter-spacing: 0;
+                margin: 0 auto;
+                width: 60vw;
+            }
+        }
+        &__notes{
+            @include var.fz(16);
+            letter-spacing: 0;
+            margin: 0 auto 4.8vw;
+        }
+        &__ttl{
+            margin: 0 auto 10.66vw;
+        }
+        &__chara{
+            top: -12.8vw;
+            left: 11vw;
+            img{
+                width: 32vw;
+                height: auto;
+            }
+        }
+        &__neko{
+            bottom: -16vw;
+            img{
+                width: 33.33vw;
+                height: auto;
+            }
+        }
+        &__tab{
+            li{
+                padding: 3.5vw 0;
+            }
+            &main{
+                li{
+                    padding: 17.6vw 4vw 16.2vw; 
+                    height: auto;
+                }
+                .yel{
+                    padding-bottom: 30vw;
+
+                }
+            }
+        }
+    
+        &__blc{
+            margin: 0 auto;
+            padding: 0 4vw;
+            &--ttl{
+                white-space: nowrap;
+            }
+            &--small{
+                width: 100%;
+                margin: 0 auto;
+                padding: 5vw 0;
+                &txt{
+                    letter-spacing: 0;
+                }
+                &-wrap{
+                    border-bottom: solid 1px #000;
+                    margin: 0 auto 25px;
+                    width: 100%;
+                    padding-top: 40px;
+                    padding-bottom: 0;
+                }
+    
+                &ttl{
+                    color: var.$red;
+                    text-align: center;
+                    @include var.fz(18);
+                    line-height: 1.2;
+                    font-weight: 900;
+                    margin: 0;
+                    letter-spacing: 0;
+                }
+            }
+        }
+        &__blc2{
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 9vw;
+        }
+
+    }
+
+}
+
+
+//追記
+.tiket__tokuten{
+    .tiket__blc{
+        padding-bottom: 30px;
+    }
+    &--img2{
+        padding: 0 40px;
+        // background: var.$yel;
+    }
+    
+    &--subttl{
+        margin-top: 50px;
+        background: var.$blue;
+        color: #FFF;
+        border-radius: 30px;
+        display: block;
+        margin-bottom: 0;
+        br{
+            display: none;
+        }
+    }
+    &--swiper{
+        &-wrapper{
+            padding: 0 16px;
+        }
+    }
+    &--txt{
+        margin-bottom: 40px;
+    }
+    @media screen and (max-width: var.$spbp) {
+        &--subttl{
+            padding-top: 10px;
+            br{
+                display: block;
+            }
+        }
+        &--swiper{
+            &-wrapper{
+                padding: 0 0;
+            }
+        }
+
+    }
+}
+.swiper--wrapper {
+    background-color: #FFF;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    img{
+        width: 100%;
+        height: auto;
+    }
+  }
+  .swiper-button-next,
+.swiper-button-prev {
+    --swiper-navigation-color: #000000; //ここに変更する色を指定
+}
+.swiper-pagination-bullet {
+    background-color: var.$green;
+}
+@include var.webpBg('.tiket__ttl', var.$imgpath+'ttl_tiket', 'png');
+@include var.webpBg('.yel .tiket__blc--ttl', var.$imgpath+'ticket-info', 'png');
+@include var.webpBg('.tiket__tokuten .tiket__blc--ttl', var.$imgpath+'prize-info', 'png');

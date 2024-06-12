@@ -1,0 +1,275 @@
+@use "./module/variable"as var;
+
+.faq, .notion{
+    background-color: var.$orange;
+    .blc__inner{
+        padding: 57px 0;
+        position: relative;
+    }
+    a{
+        color: #00A0E9;
+    }
+    &__chara{
+        font-size: 0;
+        position: absolute;
+        top: -34px;
+        left: 34px;
+        img{
+            width: 84px;
+            height: auto;
+        }
+    }
+    &__ttl{
+        white-space: nowrap;
+        text-indent: -9999px;
+        margin: 0 auto 30px;
+        background-size: 100% auto;
+        width: 343px;
+        height: 52px;
+        font-size: 0;
+    }
+    &__blc{
+        background-color: #FFF;
+        border-radius: 20px;
+        margin: 0 auto 20px;
+        &--small{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        &--arrow{
+            width: 30px;
+            min-width: 30px;
+            margin: 0 0 0 30px;
+            span{
+                display: inline-block;
+                width: 30px;
+                height: 17px;
+                background: url('../img/arrow.svg');
+                background-size: 100% auto;
+            }
+        }
+        &--txt{
+            margin: 0;
+            @include var.fz(14);
+            &-list{
+                @include var.fz(14);
+                margin: 0.8em 0;
+                text-indent: -1em;
+                padding-left: 1em;
+            }
+        }
+        &--subttl{
+            @include var.fz(40);
+            font-weight: bold;
+            line-height: 1;
+            width: 70px;
+            min-width: 70px;
+            margin: 0;
+            font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+        }
+        &--q{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 30px 25px 25px;
+            .faq__blc--subttl{
+                color: var.$green;
+            }
+            .faq__blc--txt{
+                display: flex;
+                align-items: center;
+              
+                width: 100%;
+                min-height: 40px;
+                span{
+                    display: block;
+
+                }
+            }
+        }
+        &--a{
+            display: none;  
+            &-inner{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                background: url('../img/bg_answer.svg') repeat-x;
+                background-size: 10px 2px;
+                background-position: top 0 right 0;
+                padding: 25px 30px 25px 25px;
+                .faq__blc--txt{
+                    display: flex;
+                    align-items: center;
+                  
+                    width: 100%;
+                    // min-height: 40px;
+                }
+            }
+            .faq__blc--subttl{
+                color: #F39800;
+            }
+            .faq__blc--txt{
+                margin-right: 60px;
+            }
+        }
+
+    }
+    &__inquiery{
+        text-align: center;
+        margin: 40px auto 0;
+        @include var.fz(16);
+        &2{
+            margin: 10px auto;
+            text-align: center;
+            @include var.fz(14);
+
+
+        }
+        &--wrapper{
+            display: flex;
+            padding-left: 20px;
+            justify-content: center;
+        }
+        &--note{
+            text-indent: -1em;
+            padding-left: 1em;
+            margin: 0;
+            @include var.fz(12);
+        }
+    }
+    .faq__blc--arrow{
+        animation: rotate-anime 0.3s ease-out 1;
+        transform:rotate(180deg);
+    }
+    .open{
+        .faq__blc--arrow{
+            transform:rotate(0);
+            animation: rotate-anime2 0.3s ease-out 1;
+        }
+    }
+    //faq
+    @media screen and (max-width: var.$spbp) {
+        .blc__inner{
+            padding: 14.66vw 6.66vw;
+            position: relative;
+        }
+        &__chara{
+            top: -7vw;
+            left: 14.66vw;
+            img{
+                width: 19.22vw;
+                height: auto;
+            }
+        }
+        &__ttl{
+            white-space: nowrap;
+            text-indent: -9999px;
+            margin: 0 auto 30px;
+            background-size: 100% auto;
+            width: 53.5vw;
+            height: 8.1vw;
+            font-size: 0;
+        }
+        &__blc{
+            margin: 0 auto 10px;
+
+            &--arrow{
+                width: 8vw;
+                min-width: 8vw;
+                margin: 1vw 0 0 4vw;
+                span{
+                    display: inline-block;
+                    width: 8vw;
+                    height: 4.53vw;
+                    background-size: 100% auto;
+                }
+            }
+            &--txt{
+                margin: 0;
+                @include var.fz(12);
+            }
+            &--subttl{
+                @include var.fz(32);
+                width: 12.8vw;
+                min-width: 2rem;
+                margin: 0;
+                }
+            &--small{
+                align-items: flex-start;
+                min-height: 3.2vw;
+                height: 100%;
+            }
+            &--q{
+                padding: 5.6vw 7.46vw 5.3vw 6.66vw;
+                align-items: flex-start;
+                .faq__blc--txt{
+                    display: flex;
+                    align-items: center;
+                  
+                    width: 100%;
+                    min-height: 40px;
+                    span{
+                        display: block;
+
+                    }
+                }
+            }
+            &--a{
+
+                &-inner{
+                    align-items: flex-start;
+                    padding: 5.6vw 7.46vw 5.3vw 6.66vw;
+                }
+
+                .faq__blc--txt{
+                    margin-right: 2.66vw;
+                }
+            }
+    
+        }
+        &__inquiery{
+            margin: 9vw auto 0;
+
+        }
+        
+    }
+
+}
+
+
+
+.notion{
+    background-color: #b6f1fc;
+    &__ttl{
+        background-image: url('../img/ttl_notion.png');
+        background-repeat: no-repeat;
+        white-space: nowrap;
+        text-indent: -9999px;
+        margin: 0 auto 30px;
+        background-size: 100% auto;
+        width: 200px;
+        height: 52px;
+        font-size: 0;
+    }
+    .faq__blc--txt{
+        display: block;
+    }
+    .faq__blc--a{
+        .faq__blc--a-inner{
+            display: block;
+            background: url('../img/bg_notion.svg') repeat-x;
+            background-size: 10px 2px;
+            background-position: top 0 right 0;
+        }
+    }
+    .faq__blc--txt{
+        &.last{
+            margin-top: 20px;
+        }
+        &.top{
+            margin-bottom: 20px;
+        }
+    }
+}

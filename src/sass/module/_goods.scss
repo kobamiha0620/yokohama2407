@@ -1,0 +1,537 @@
+@use "./module/variable"as var;
+
+
+
+.goods {
+    background-color: var.$yel;
+    .access__noteblc--txt{
+        text-align: center;
+    }
+    .blc__inner {
+        padding: 57px 0;
+        position: relative;
+    }
+    &__test {
+        background-color: #F9D7E6;
+        height: 200px;
+        position: relative;
+        width: 100%;
+        margin: 0 auto 10px;
+
+        &--img {
+            width: 310px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &__ttl {
+        text-indent: -9999px;
+        white-space: nowrap;
+        width: 343px;
+        height: 52px;
+        background-size: 100% auto;
+        margin: 0 auto 30px;
+    }
+
+    &__list1 {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        width: 100%;
+
+        justify-content: space-between;
+
+        li {
+            width: 310px;
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 290px;
+                height: 290px;
+                object-fit: contain;
+            }
+        }       
+    }
+
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto 80px;
+        padding: 0;
+        &--new{
+            color: #FFF;
+            background-color: #F00;
+            position: absolute;
+            font-size: 10px;
+            padding: 3px 10px;
+            right: 0;
+            top: 0;
+            &-blc{
+                position: relative;
+            }
+        }
+        &--note{
+            color: #F00;
+            @include var.fz(12);
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+        li {
+            width: 160px;
+            margin-right: 20px;
+            &:nth-child(4n){
+                margin-right: 0;
+            }
+
+
+        }
+
+        &--img {
+            width: 100%;
+            height: 160px;
+            background-color: #FFF;
+            padding: 5px;
+            // border: solid 1px #ccc;
+            margin: 0 0 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btn{
+                cursor: pointer;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+            img {
+                object-fit: contain;
+                width: 150px;
+                height: 150px
+            }
+        }
+
+        &--name {
+            @include var.fz(14);
+            margin: 0 0;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        &--price {
+            @include var.fz(14);
+            line-height: 1;
+            margin: 0;
+            text-align: center;
+            margin: 5px 0 10px;
+            span {
+                font-size: 0.8em;
+                display: inline-block;
+                margin-left: -2px;
+            }
+        }
+        &--zenbu{
+            border: solid 5px var.$dyel;
+            background-color: #FFF;
+            padding: 30px 36px;
+            border-radius: 20px;
+            margin: -60px 0 80px;
+            display: none;
+            &-ttl{
+                margin: 0;
+                span{
+                    background: var.$dyel;
+                    display: inline-block;
+                    padding: 8px 16px;
+                    font-weight: 900;
+                    border-radius: 30px;
+
+
+                }
+            }
+            &-img{
+                margin-top: 20px;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    //goods
+    @media screen and (max-width: var.$spbp) {
+        width: 100%;
+        .access__noteblc--txt{
+            text-align: left;
+        }
+        .blc__inner {
+            padding: 16.5vw 6.66vw;
+        }
+
+        &__ttl {
+            margin: 0 auto 5.8vw;
+            width: 53.5vw;
+            height: 8.2vw;
+        }
+
+        &__list {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            li {
+                width: 40vw;
+                max-width: 40vw;
+                margin-right: 6.66vw;
+                margin-bottom: 8vw;
+                &:last-child{
+                    margin-right: 6.66vw;
+                }
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+
+            &--img {
+                width: 40vw;
+                height: 40vw;
+                margin: 0 0 10px;
+                padding: 1vw;
+                .btn{
+                    cursor: pointer;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+                img {
+                    width: 38vw;
+                    height: 38vw;
+                }
+            }
+            &--zenbu{
+
+                padding: 5vw;
+                border-radius: 20px;
+                margin: -5vw 0 10vw;
+
+                &-img{
+                    margin-top: 5vw;
+
+                }
+                &-ttl{
+                    span{
+                        @include var.fz(12);
+                        padding: 8px 10px;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+//追記
+.goods {
+    &__feature{
+        text-align: center;
+        line-height: 1.5;
+        @include var.fz(18);
+        margin: 40px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--before{
+            width: 19px;
+            height: 43px;
+            margin-right: 23px;
+            background: url('../img/goods_bg0.svg') no-repeat;
+            background-size: 100% auto;
+            white-space: nowrap;
+            text-indent: -9999px;
+            display: inline-block;
+        }
+        &--after{
+            width: 19px;
+            height: 43px;
+            margin-left: 23px;
+            background: url('../img/goods_bg.svg') no-repeat;
+            background-size: 100% auto;
+            white-space: nowrap;
+            text-indent: -9999px;
+            display: inline-block;
+
+        }
+    }
+    &__subttl2 {
+        text-align: center;
+        font-weight: 900;
+        @include var.fz(20);
+
+        padding: 0;
+        margin: 60px auto 30px;
+        // border-top: solid 1px #000;
+        position: relative;
+        line-height: 1;
+
+        span {
+            // background: var.$yel;
+            // padding: 0 10px;
+            // display: inline-block;
+            // top: -0.5em;
+            // left: 50%;
+            // position: absolute;
+            // transform: translate(-50%, 0);
+            // -webkit-transform: translatee(-50%, 0);
+            // -ms-transform: translatee(-50%, 0);
+            white-space: nowrap;
+        }
+
+        br {
+            display: none;
+        }
+    }
+
+    &__list1 {
+        margin: 20px 0;
+    }
+
+
+    @media screen and (max-width: var.$spbp) {
+        &__subttl2 {
+            line-height: 1.4;
+            @include var.fz(16);
+            line-height: 1.4;
+            margin: 5vw auto;
+            br{
+                display: block;
+                
+            }
+        }
+
+    }
+}
+.goods__list{
+    li{
+    }
+    button{
+        font-size: 0;
+        padding: 0;
+        border: none;
+        background-color: rgba(255,255,255, 0.0);
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 8887;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 1s ease-in-out;
+  }
+  .modal-container .img {
+      background: #f1f1f1;
+      margin-bottom: 15px;
+  }
+  .modal-container p {
+      margin-bottom: 10px;
+  }
+  .modal-container p:last-child {
+      margin-bottom: 0;
+  }
+  .modal-content {
+      background: #FFF;
+      overflow-y: auto;
+      padding: 20px 25px;
+      width: 90%;
+      max-width: 800px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-height: 80vh;
+      animation: show 0.6s linear 0s;
+      filter: drop-shadow(0px 2px 6px #777);
+  }
+  .modal-top {
+      display: inline-block;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+  }
+  .modal-close {
+      color: #FF0000;
+      text-decoration: none;
+      font-size: 2rem;
+      line-height: 1;
+      padding: 0 8px;
+  }
+  .modal-close:hover, .modal-close:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modal-title {
+    color: #FFF;
+  }
+  @keyframes show{
+      from{
+          opacity: 0;
+      }
+      to{
+          opacity: 1;
+      }
+  }
+
+
+
+  //追記
+  //ポスター部分
+#modalFour{
+    $color_1: #FF0000;
+    $color_2: #FFF;
+    $background-color_1: rgba(0, 0, 0, 0.7);
+    .swiper{
+    }
+    .goods__list--price{
+        text-align: center;
+        padding-bottom: 36px;
+    }
+    .swiper-pagination{
+        bottom: -5px;
+    }
+
+    .modal-container {
+        .img {
+            background: #f1f1f1;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .modal-content {
+        padding: 20px 25px;
+        width: 90%;
+        max-width: 800px;
+        max-height: 90vh;
+    }
+    .modal-top {
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+    .modal-close {
+        color: $color_1;
+        text-decoration: none;
+        font-size: 2rem;
+        line-height: 1;
+        padding: 0 8px;
+        &:hover {
+            text-decoration: none;
+            cursor: pointer;
+        }
+        &:focus {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    .modal-title {
+        color: $color_2;
+    }
+    @media screen and (max-width: var.$spbp) {
+        .modal-content {
+            padding: 20px 10px;
+            width: 90%;
+            max-width: 100%;
+            max-height: 90vh;
+        }
+        .swiper-button-next{
+            right: 0;
+        }
+        .swiper-button-prev{
+            left: 0;
+        }
+    }
+
+}
+.goods__swiper{
+    &--img{
+        width:  67vh;
+        max-width: 480px;
+        height: 67vh;
+        max-height: 480px;
+        margin: 0 auto;
+        // background: var.$yel;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &--subttl{
+        padding-top: 50px;
+        margin-bottom: 0;
+        br{
+            display: none;
+        }
+    }
+    &__swiper{
+        &--wrapper{
+            padding: 0 16px;
+        }
+    }
+    &--txt{
+        margin-bottom: 40px;
+    }
+    @media screen and (max-width: var.$spbp) {
+        &--subttl{
+            br{
+                display: block;
+            }
+        }
+        &--wrapper{
+            padding: 0 0;
+        }
+        &--img{
+            padding: 0 30px;
+            width:  100%;
+            max-width: 500px;
+            height: 100%;
+            max-height: 500px;
+            margin: 0 auto;
+            // background: var.$yel;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+    }
+}
+.swiper--wrapper {
+    background-color: #FFF;
+}
+
+@include var.webpBg('.goods__ttl', var.$imgpath+'ttl_goods', 'png');

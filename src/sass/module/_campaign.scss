@@ -1,0 +1,87 @@
+@use "./module/variable"as var;
+
+.campaignheader{
+    background: url('../img/campaign/top_pc-yokohama.jpg');
+    background-size: 100% auto;
+    font-size: 0;
+    line-height: 0;
+    width: 100vw;
+    padding-top: 59.8vw;
+    @media screen and (max-width: var.$spbp) {
+        background: url('../img/campaign/top_sp-yokohama.jpg');
+        padding-top: 167.4vw;
+        background-size: 100% auto;
+
+    }
+}
+.campaign{
+    background: url('../img/campaign/bg_campaign-yokohama.jpg');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    padding-bottom: 100px;
+    &__inner{
+        width: 700px;
+        margin: 0 auto;
+        border: solid 5px #FFD469;
+        border-radius: 20px;
+        padding: 65px 50px 50px;
+        background-color: #FFF;
+    }
+    &__ttl{
+        text-align: center;
+        font-weight: 900;
+        @include var.fz(40);
+        letter-spacing: 1px;
+        margin: 0 auto 30px;
+        line-height: 1.1;
+    }
+    &__subttl{
+        @include var.fz(24);
+        line-height: 1;
+        font-weight: 900;
+        letter-spacing: 1px;
+        margin: 0 auto 30px;
+        text-align: center;
+        br{
+            display: none;
+        }
+    }
+    &__txt{
+        @include var.fz(15);
+        line-height: 1.5;
+        a{
+            color: #00A0E9;
+        }
+    }
+    @media screen and (max-width: var.$spbp) {
+        background: url('../img/campaign/bg_campaign_sp-yokohama.jpg');
+        background-repeat: repeat-y;
+        background-size: 100% auto;
+        padding: 0 6vw 10vw;
+        &__inner{
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 20px;
+            padding: 10vw 6vw 10vw;
+        }
+        &__ttl{
+            @include var.fz(30);
+            letter-spacing: 1px;
+            margin: 0 auto 5vw;
+        }
+        &__subttl{
+            @include var.fz(18);
+            line-height: 1.6;
+            letter-spacing: 1px;
+            margin: 0 auto 5vw;
+            br{
+                display: block;
+            }
+    
+        }
+        &__txt{
+            @include var.fz(13);
+            line-height: 1.5;
+        }
+    }
+}

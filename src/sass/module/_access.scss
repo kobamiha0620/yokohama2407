@@ -1,0 +1,142 @@
+@use "./module/variable"as var;
+
+
+
+.access{
+    background-color: var.$yel;
+    .blc__inner{
+        padding: 57px 0;
+        position: relative;
+    }
+    &__note{
+        &--ttl{
+            text-align: center;
+            font-weight: bold;
+            @include var.fz(20);
+        }
+    }
+    &__ttl{
+        text-indent: -9999px;
+        white-space: nowrap;
+        width: 236px;
+        height: 52px;
+        background-size: 100% auto;
+        margin: 0 auto 30px;
+    }
+    &__subttl{
+        text-align: center;
+        @include var.fz(20);
+        font-weight: 900;
+    }
+    &__add{
+        text-align: center;
+        @include var.fz(14);
+        font-weight: 700;
+    }
+    &__mapwrap{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 40px;
+    }
+    &__map{
+        background-color: #000;
+        border-radius: 40px;
+        @include var.fz(16);
+        font-weight: 800;
+        color: #FFF;
+        text-decoration: none;
+        margin: 0 auto;
+        display: inline-block;
+        padding: 8px 53px 10px 27px;
+        line-height: 24px;
+        background-image: url('../img/map.svg');
+        background-repeat: no-repeat;
+        background-position: right 16px top 8px;
+        background-size: 23px 23px;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    &__blc{
+        margin: 0 auto 40px;
+        max-width: 330px;
+    }
+    &__subttl2{
+        font-weight: 600;
+        text-align: center;
+        @include var.fz(18);
+        margin: 0 auto 10px;
+    }
+    &__subtxt{
+        text-align: center;
+        @include var.fz(14);
+        line-height: 1.8;
+        margin: 0;
+    }
+    &__noteblc{
+        background-color: #FFF;
+        max-width: 568px;
+        margin: 0 auto;
+        padding: 25px;
+        a{
+            color: #00A0E9;
+        }
+        &--txt{
+            @include var.fz(12);
+            line-height: 1.8;
+            margin: 0 0 16px;
+
+        }
+        &--txt2{
+            @include var.fz(12);
+            line-height: 1.8;
+            margin: 0;
+        }
+        &--txt3{
+            @include var.fz(12);
+            line-height: 1.8;
+            margin: 0;
+            text-indent: -1em;
+            padding-left: 1em;
+        }
+    }
+    //access
+    @media screen and (max-width: var.$spbp) {
+        .blc__inner{
+            padding: 16.5vw 6.66vw;
+        }
+        &__ttl{
+            margin: 0 auto 5.8vw;
+        }
+        &__mapwrap{
+            margin: 0 auto 11vw;
+        }
+        &__map{
+            &:hover{
+                opacity: 1;
+            }
+        }
+        &__blc{
+            margin: 0 auto 10vw;
+            max-width: 100%;
+        }
+
+        &__noteblc{
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 6vw;
+
+            &--txt{
+                @include var.fz(12);
+                line-height: 1.8;
+                margin: 0 0 4.5vw;
+    
+            }
+
+        }
+        
+    }
+
+}
+
+@include var.webpBg('.access__ttl', var.$imgpath+'ttl_access', 'png');

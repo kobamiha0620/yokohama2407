@@ -1,0 +1,90 @@
+@use "./module/variable"as var;
+
+.footer{
+    background: var.$yel;
+    padding: 46px 0 33px;
+    &__ttl{
+        text-align: center;
+        @include var.fz(20);
+        line-height: 1;
+        font-weight: 400;
+        margin: 0 auto 23px;
+        &::before{
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-size: 100% auto;
+            background: url('../img/before.svg') no-repeat;
+            font-size: 0;
+            display: inline-block;
+            margin-bottom: -5px;
+        }
+        &::after{
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-size: 100% auto;
+            background: url('../img/after.svg') no-repeat;
+            font-size: 0;
+            display: inline-block;
+            margin-bottom: -5px;
+
+        }
+    }
+    &__image{
+        width: 374px;
+        height: 261px;
+        display: block;
+        margin: 0 auto;
+        background-size: 100% auto;
+        white-space: nowrap;
+        text-indent: -9999px;
+    }
+    &__sns{
+        font-size: 0;
+        a{
+            background-size: 100% auto;
+            display: block;
+            width: 289px;
+            height: 88px;
+            margin: 0 auto 18px;
+            @include var.fz(12);
+            text-decoration: none;
+            color: #000;
+            padding-left: 87px;
+            padding-top: 26px;
+            font-weight: bold;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+
+    }
+    &__copy{
+        text-align: center;
+        @include var.fz(10);
+        line-height: 1;
+        margin: 8px 0 0;
+    }
+    @media screen and (max-width: var.$spbp) {
+        padding: 13.33vw 0 9.6vw;
+        &__ttl{
+
+        }
+        &__image{
+            width: 100vw;
+            height: 69.8vw;
+
+        }
+
+        &__copy{
+            margin: 8px 0 0;
+    
+        }
+    }
+}
+
+
+@include var.webpBg('.footer__image', var.$imgpath+'footer_img', 'png');
+@include var.webpBg('.footer__sns--tw', var.$imgpath+'bg_twitter', 'png');
+@include var.webpBg('.footer__sns--ig', var.$imgpath+'ig', 'png');
