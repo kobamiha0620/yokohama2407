@@ -12,12 +12,12 @@
         position: relative;
     }
     &__test {
-        background-color: #F9D7E6;
+        background-color: #FFF35C;
         height: 200px;
         position: relative;
         width: 100%;
         margin: 0 auto 10px;
-
+        border-radius: 10px;
         &--img {
             width: 310px;
             position: absolute;
@@ -313,6 +313,11 @@
 
 
     @media screen and (max-width: var.$spbp) {
+        &__test{
+            &--img{
+                width: 60vw;
+            }
+        }
         &__subttl2 {
             line-height: 1.4;
             @include var.fz(16);

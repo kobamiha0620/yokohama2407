@@ -1,0 +1,182 @@
+@use "./module/variable"as var;
+
+
+.sstage {
+  background-color: var.$yel;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .blc__inner {
+    padding: 80px 0 57px;
+    position: relative;
+
+  }
+
+  .area__spot {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+
+  &__img {
+    margin: 60px 0 0;
+  }
+
+  &__txt {
+    text-align: center;
+    @include var.fz(24);
+    font-weight: bold;
+    margin: 0 auto 18px;
+
+    &2 {
+      text-align: center;
+    }
+  }
+  &__spottext{
+    text-align: center;
+    @include var.fz(16);
+  }
+  &__ttl {
+    @include var.bg;
+    background-image: url('../img/ttl_sstagemod.png');
+    width: 589px;
+    height: 46px;
+    margin: 0 auto 20px;
+  }
+
+  &__symbol {
+    width: 80px;
+    position: absolute;
+    top: -16px;
+    left: 40px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: var.$spbp) {
+    .blc__inner {
+      padding: 16.5vw 6.66vw;
+    }
+
+    &__ttl {
+      width: 80vw;
+      height: 8.6vw;
+      margin: 0 auto 4vw;
+    }
+    &__symbol {
+      width: 18vw;
+      position: absolute;
+      top: -4vw;
+      left: 5vw;
+  
+    }
+    &__txt {
+      text-align: center;
+      @include var.fz(18);
+      font-weight: bold;
+      margin: 0 auto 18px;
+  
+      &2 {
+        @include var.fz(14);
+
+      }
+    }
+    &__spottext{
+    @include var.fz(14);
+  }
+    .area__spot{
+      padding: 21vw 6vw 10vw;
+      &--txt{
+        @include var.fz(12);
+
+      }
+    }
+
+  }
+  .area__spot1--blc-note{
+    @include var.fz(10);
+      text-indent: -1em;
+      padding-left: 1em;
+      margin: 0;
+    
+  }
+  
+  
+
+  .area{
+    padding-bottom: 10vw;
+  }
+}
+
+.area{
+  .area__spot1--blc-note{
+    @include var.fz(10);
+      text-indent: -1em;
+      padding-left: 1em;
+      margin: 0;
+    
+  }
+}
+
+// @include var.webpBg('.area__ttl', var.$imgpath+'ttl_area', 'png');
+
+
+// commingsoon
+.area__spot4 {
+  .commingsoon {
+    background-color: #FFF35C;
+    margin-top: 30px;
+    @media screen and (max-width: var.$spbp) {
+      margin-bottom: 10vw;
+    }
+
+  }
+}
+
+.commingsoon {
+  height: 200px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+
+  &__img {
+    width: 310px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+
+  }
+
+  @media screen and (max-width: var.$spbp) {
+    .area__spot1--blc-txt2{
+      text-align: center;
+    }
+    &__img {
+      width: 60vw;
+    }
+
+  }
+}
+@media screen and (max-width: var.$spbp) {
+  .area{
+    .area__spot1--blc-txt2{
+      text-align: center;
+    }
+  }
+
+}

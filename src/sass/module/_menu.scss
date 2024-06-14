@@ -1,10 +1,10 @@
 @use "./module/variable"as var;
 
-.gnavBg{
+.gnavBg {
     position: fixed;
     z-index: 998;
-    background-color: rgba(0,0,0,0.6);
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.2);
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -14,7 +14,8 @@
     text-indent: -9999px;
     -webkit-overflow-scrolling: touch;
     display: none;
-    &.active{
+
+    &.active {
         display: block;
     }
 }
@@ -35,11 +36,13 @@
     background-size: auto 100%;
     background-position: top 26px center;
     background-repeat: no-repeat;
-    &__inner{
+
+    &__inner {
         position: relative;
         width: 100%;
         height: 100%;
     }
+
     @media screen and (max-width: var.$spbp) {
         width: 84vw;
     }
@@ -57,6 +60,7 @@
     width: 100%;
     padding: 100px 0 0 35px;
     -webkit-overflow-scrolling: touch;
+
     @media screen and (max-width: var.$spbp) {
         padding: 25vw 0 0 8vw;
     }
@@ -111,6 +115,7 @@ $background-color_1: #666;
             top: 33px;
         }
     }
+
     @media screen and (max-width: var.$spbp) {
         top: 10px;
         right: 10px;
@@ -140,47 +145,103 @@ $background-color_1: #666;
 }
 
 
+@keyframes rotate-z {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@-webkit-keyframes bgroop {
+    from {
+        background-position: 0  0;
+    }
+    to {
+        background-position: -2094px 0;
+    }
+}
+@keyframes bgroop {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -2094px 0;
+    }
+}
 
 .header {
-    width: 100%;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    padding: 42vw 0 3.77vw;
     position: relative;
-    background-position: center top;
-    @media screen and (max-width: 1080px ) {
-        background-size: 120% auto;
-        padding: 50vw 0 3.77vw;
+    &__fv {
+        width: 100%;
+        height: 100dvh;
+        height: 100vh;
+        position: relative;
+        img {
+            background-image: url('../img/kumo.png');
+            background-repeat: repeat-x;
+            background-position: -50px 0;
+            -webkit-animation: bgroop 60s linear infinite;
+            animation: bgroop 60s linear infinite;
+            background-color: #00B4ED;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
+        &--taiyo {
+            z-index: 3;
+            position: absolute;
+            right: 130px;
+            top: 110px;
+            animation: rotate-z 10s linear infinite;
+            /* 2秒で1回転 */
+
+            img {
+                width: 90px;
+                height: auto;
+            }
+        }
     }
-    &__chara{
+    &__blc{
+        padding: 80px 0;
+    }
+    &__chara {
         position: absolute;
         width: 208px;
-        bottom: 20px;  
+        bottom: 20px;
         right: -20px;
-        img{
+
+        img {
             width: 100%;
             height: auto;
         }
     }
-    &__campaign{
+
+    &__campaign {
 
         margin: 20px auto;
         width: 300px;
         display: block;
-        &:hover{
+
+        &:hover {
             opacity: 0.7;
         }
-        img{
+
+        img {
             width: 100%;
             height: auto;
             border-radius: 8px;
         }
+
         @media screen and (max-width: var.$spbp) {
             width: 86vw;
         }
     }
-    &__link{
+
+    &__link {
         position: fixed;
         z-index: 3;
         right: 0;
@@ -198,13 +259,13 @@ $background-color_1: #666;
         padding: 25px 25px 25px 50px;
         color: #000;
 
-        &:hover{
+        &:hover {
             background-color: var.$yel;
             color: #000;
         }
     }
 
-    &__details{
+    &__details {
         background: #FFF;
         border: solid 5px #000;
         position: relative;
@@ -212,20 +273,24 @@ $background-color_1: #666;
         display: inline-block;
         border-radius: 30px;
         margin: 0 auto 40px;
-        &--wrap{
+
+        &--wrap {
             display: flex;
             justify-content: center;
         }
-        &--img{
+
+        &--img {
             width: 325px;
             margin: 0 auto;
             font-size: 0;
-            img{
+
+            img {
                 width: 100%;
                 height: auto;
             }
         }
-        &--ttl{
+
+        &--ttl {
             position: absolute;
             white-space: nowrap;
             top: -22px;
@@ -233,7 +298,8 @@ $background-color_1: #666;
             transform: translateX(-50%);
             margin: 0;
             text-align: center;
-            span{
+
+            span {
                 display: inline-block;
                 color: #FFF;
                 width: 150px;
@@ -244,48 +310,55 @@ $background-color_1: #666;
                 @include var.fz(20);
             }
         }
-        &--tblc{
+
+        &--tblc {
             border-bottom: solid 2px #000;
             display: flex;
             padding: 0 26px 8px;
             align-items: flex-end;
             margin: 0 0 12px;
 
-            &-year{
+            &-year {
                 text-align: center;
                 @include var.fz(14);
                 font-weight: bold;
                 line-height: 1;
                 margin: 0 auto 7px;
             }
-            &-date{
+
+            &-date {
                 @include var.fz(26);
                 font-weight: bold;
                 line-height: 1;
                 margin: 0;
-                span{
+
+                span {
                     display: inline-block;
                     @include var.fz(14);
                     margin: 0 0 0 5px;
                 }
             }
-            &-arr{
+
+            &-arr {
                 margin: 0 20px;
 
             }
         }
-        &--txt1{
+
+        &--txt1 {
             text-align: center;
             @include var.fz(18);
             margin: 0 auto 10px;
             line-height: 1;
         }
-        &--txt2{
+
+        &--txt2 {
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            &-time{
+
+            &-time {
                 color: #fff;
                 background: #000;
                 @include var.fz(16);
@@ -293,7 +366,8 @@ $background-color_1: #666;
                 border-radius: 7px;
                 display: inline-block;
             }
-            &-time2{
+
+            &-time2 {
                 color: #000;
                 @include var.fz(20);
                 display: inline-block;
@@ -302,26 +376,31 @@ $background-color_1: #666;
             }
         }
     }
-    &__ttl{
+
+    &__ttl {
         text-align: center;
         color: #000;
         margin: 0 auto 30px;
         @include var.fz(22);
         line-height: 1.545;
     }
-    &__subttl{
+
+    &__subttl {
         text-align: center;
         color: #000;
         margin: 0 auto;
         @include var.fz(16);
         line-height: 1.75;
     }
-    &__menu{
+
+    &__menu {
         margin: 0;
         padding: 0;
-        li{
+
+        li {
             list-style: none;
-            a{
+
+            a {
                 @include var.fz(28);
                 font-weight: 900;
                 text-decoration: none;
@@ -331,26 +410,61 @@ $background-color_1: #666;
             }
         }
     }
+
     @media screen and (max-width: var.$spbp) {
-        padding: 117vw 0 12.5vw;
-        background-size: 100% auto;
-        &__chara{
+        padding: 0;
+        &__fv {
+            width: 100%;
+            min-height: 100dvh;
+            min-height: 100vh;
+            position: relative;
+            img {
+                width: 100dvw;
+                width: 100vw;
+                background-image: url('../img/kumo.png');
+                background-repeat: repeat-x;
+                background-position: -50px 0;
+                -webkit-animation: bgroop 60s linear infinite;
+                animation: bgroop 60s linear infinite;
+
+
+            }
+    
+            &--taiyo {
+                z-index: 3;
+                position: absolute;
+                right: 10vw;
+                top: 20vw;
+                /* 2秒で1回転 */
+    
+                img {
+                    width: 20vw;
+                    height: auto;
+                }
+            }
+        }
+        &__blc{
+            padding: 80px 0;
+        }
+        &__chara {
             position: absolute;
             width: 50vw;
-            bottom: 20px;  
+            bottom: 20px;
             right: -20px;
 
         }
-        &__menu{
 
-            li{
-                a{
+        &__menu {
+
+            li {
+                a {
                     @include var.fz(20);
                     margin: 0 0 5vw;
                 }
             }
         }
-        &__link{
+
+        &__link {
             position: fixed;
             z-index: 2;
             right: 50%;
@@ -364,19 +478,23 @@ $background-color_1: #666;
             display: block;
             border-radius: 40px;
             padding: 25px 30px;
+
             // padding-right: clamp(10px, 50px, 50px);
             // padding-left: clamp(10px, 50px, 50px);
-            &:hover{
+            &:hover {
                 background-color: var.$dyel;
             }
         }
-        &__details{
+
+        &__details {
             // padding: 6.9vw 5vw 4.5vw;
             margin: 0 auto 10vw;
-            &--img{
+
+            &--img {
                 width: 86.66vw;
             }
-            &--ttl{
+
+            &--ttl {
                 position: absolute;
                 white-space: nowrap;
                 top: -22px;
@@ -384,34 +502,41 @@ $background-color_1: #666;
                 transform: translateX(-50%);
                 margin: 0;
                 text-align: center;
-                span{
+
+                span {
                     width: 40vw;
                 }
             }
-            &--tblc{
+
+            &--tblc {
                 padding: 0 7vw 2.5vw;
                 margin: 0 0 3.2vw;
             }
 
         }
-        &__ttl{
+
+        &__ttl {
             text-align: left;
             @include var.fz(22);
             margin: 0 auto 6vw;
             width: 87.2vw;
-            br{
+
+            br {
                 display: none;
             }
-            span{
-                br{
+
+            span {
+                br {
                     display: block;
                 }
             }
         }
-        &__subttl{
+
+        &__subttl {
             text-align: left;
             width: 87.2vw;
-            br{
+
+            br {
                 display: none;
             }
         }
@@ -419,10 +544,10 @@ $background-color_1: #666;
 
 }
 
-@include var.webpBg('.header', var.$imgpath+'img_fvpc');
-@include var.webpBg('.g-nav', var.$imgpath+'bg_menu', 'png');
+// @include var.webpBg('.header', var.$imgpath+'img_fvpc');
+// @include var.webpBg('.g-nav', var.$imgpath+'bg_menu', 'png');
 
-@media screen and (max-width: var.$spbp) {
-    @include var.webpBg('.header', var.$imgpath+'img_fvsp');
+// @media screen and (max-width: var.$spbp) {
+//     @include var.webpBg('.header', var.$imgpath+'img_fvsp');
 
-}
+// }

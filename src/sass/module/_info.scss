@@ -1,0 +1,272 @@
+@use "./module/variable"as var;
+
+
+.info {
+    background-color: #51C0FE;
+    padding: 100px 0;
+    img{
+      width: 100%;
+      height: auto;
+    }
+
+    &__tokuten{
+      background-color: #FFF77B;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    &__inner{
+        padding: 57px 57px 0;
+    }
+    &__ttl{
+      text-align: center;
+      @include var.fz(18);
+      font-weight: bold;
+    }
+    &__tktblc{
+      margin: 0 auto 30px;
+    }
+    &__swipe{
+      padding: 0;
+      margin-top: 20px;
+    }
+    &__txt{
+      @include var.fz(16);
+      font-weight: bold;
+      margin: 0 auto 10px;
+      text-align: center;
+      &.center{
+        text-align: center;
+      }
+      &--small{
+        @include var.fz(14);
+        margin: 0 auto;
+        line-height: 1.6;
+        &.center{
+          text-align: center;
+        }
+      }
+    }
+    &__price{
+      text-align: center;
+      font-weight: bold;
+      @include var.fz(16);
+      margin:10px 0 0;
+      line-height: 1.5;
+    }
+    &__note{
+      @include var.fz(12);
+      margin: 0 auto;
+      text-indent: -1em;
+      padding-left: 1em;
+      &.center{
+        text-align: center;
+      }
+    }
+    &__img{
+       max-width: 600px;
+       margin: 10px auto;
+       img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+       }
+       &--small{
+
+       }
+    }
+    &__blc{
+      position: relative;
+      border: solid 5px #000;
+      border-radius: 20px;
+      background-color: #FFF;
+      margin: 0 auto 30px;
+      
+      &--small{
+          padding: 20px 0 0;
+          margin: 0 auto;
+          &-wrap{
+              border-bottom: solid 1px #000;
+              margin: 0 auto 25px;
+              max-width: 600px;
+              padding-top: 40px;
+              padding-bottom: 20px;
+          }
+
+          &ttl{
+              color: var.$red;
+              text-align: center;
+              @include var.fz(24);
+              line-height: 1.2;
+              font-weight: 900;
+              margin: 0;
+              letter-spacing: 0.1em;
+              margin-top: 1em;
+              br{
+                display: none;
+              }
+          }
+          &txt{
+            @include var.fz(16);
+            line-height: 1.6;
+              text-align: center;
+              margin: 10px auto 0;
+              font-weight: 700;
+              letter-spacing: 1px;
+          }
+      }
+  }
+    @media screen and (max-width: var.$spbp) {
+      padding: 0;
+
+    &__tokuten{
+      border-radius: 5px;
+      padding: 10px;
+    }
+    &__inner{
+        padding: 10vw 10px 0;
+    }
+    &__ttl{
+      @include var.fz(14);
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    &__tktblc{
+      margin: 0 auto 30px;
+    }
+    &__txt{
+      @include var.fz(12);
+      &--small{
+        @include var.fz(11);
+        margin: 0 auto 10px;
+      }
+    }
+    &__price{
+      @include var.fz(16);
+      margin: 0;
+      line-height: 1.5;
+    }
+    &__note{
+      @include var.fz(10);
+      margin: 0 auto;
+      &.center{
+        text-align: center;
+      }
+    }
+    &__img{
+       max-width: 400px;
+       margin: 10px auto;
+       img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+       }
+       &--small{
+
+       }
+    }
+    &__blc{
+      position: relative;
+      border: solid 5px #000;
+      border-radius: 20px;
+      background-color: #FFF;
+      margin: 0 auto 30px;
+      
+      &--small{
+          padding: 20px 0 0;
+          margin: 0 auto;
+          &-wrap{
+              border-bottom: solid 1px #000;
+              margin: 0 auto 25px;
+              max-width: 600px;
+              padding-top: 40px;
+              padding-bottom: 20px;
+          }
+
+          &ttl{
+              @include var.fz(16);
+              margin-top: 1em;
+              br{
+                display: block;
+              }
+          }
+          &txt{
+            @include var.fz(16);
+            line-height: 1.6;
+              text-align: center;
+              margin: 10px auto 0;
+              font-weight: 700;
+              letter-spacing: 1px;
+          }
+      }
+  }
+        .blc__inner {
+            padding: 16.5vw 6.66vw;
+        }
+
+      }
+
+      .tiket__neko{
+        display: none;
+      }
+
+  .tiket__txt{
+    max-width: 600px;
+  }
+}
+
+.area__spot1--blc-txt2{
+  text-align: center;
+}
+.area__spot1--blc-note{
+  text-indent: -1em;
+  padding-left: 1em;
+  margin: 5px 0;
+}
+
+.accordion{
+  display: none;
+  &__ttl{
+    @include var.fz(16);
+    text-align: center;
+  }
+}
+
+.accordion{
+  &__in{
+    display: inline-block;
+    @include var.fz(16);
+    margin: 0 auto;
+  }
+  &__ttl{
+    text-align: center;
+    background-color: #9ADEEC;
+    border-radius: 30px;
+    padding: 2px 10px;
+    margin: 0 auto 8px;
+    span{
+      width: 15px;
+      min-width: 15px;
+      display: inline-block;
+      width: 14px;
+      height: 8px;
+      background: url('../img/arrow.svg');
+      background-size: 100% auto;
+      transform: scale(1,-1);
+
+
+    }
+  }
+}
+// @include var.webpBg('.area__ttl', var.$imgpath+'ttl_area', 'png');
+
+//スワイプ調整
+.info{
+  @media screen and (max-width: var.$spbp) {
+    .swiper-button-next{
+
+    }
+  }
+
+}

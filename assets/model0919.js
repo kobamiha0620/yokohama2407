@@ -42,7 +42,6 @@ $(function(){
   });
 
   $('.accordion__ttl').click(function(){
-    console.log('test');
     $(this).next('.accordion').slideToggle();
     $(this).addClass("disable");
   });
@@ -121,15 +120,15 @@ function add_class_in_scrolling(target) {
 
 
 $(window).on('load scroll', function() {
-  add_class_in_scrolling($('.header'));
-  add_class_in_scrolling($('.area__map'));
-  add_class_in_scrolling($('.area__spot1--opacity'));
-  add_class_in_scrolling($('.area__spot2'));
-  add_class_in_scrolling($('.area__spot3'));
-  add_class_in_scrolling($('.cafe__blc'));
-  add_class_in_scrolling($('.cafe__blc'));
-  add_class_in_scrolling($('.goods__test'));
-  add_class_in_scrolling($('.area__spot1--topblc'));
+  // add_class_in_scrolling($('.header'));
+  // add_class_in_scrolling($('.area__map'));
+  // add_class_in_scrolling($('.area__spot1--opacity'));
+  // add_class_in_scrolling($('.area__spot2'));
+  // add_class_in_scrolling($('.area__spot3'));
+  // add_class_in_scrolling($('.cafe__blc'));
+  // add_class_in_scrolling($('.cafe__blc'));
+  // add_class_in_scrolling($('.goods__test'));
+  // add_class_in_scrolling($('.area__spot1--topblc'));
 
   $('.fadein_block').each(function(){
     var elemPos = $(this).offset().top;
