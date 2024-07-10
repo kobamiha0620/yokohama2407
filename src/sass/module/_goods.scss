@@ -4,6 +4,29 @@
 
 .goods {
     background-color: var.$yel;
+    &__seal{
+        text-align: center;
+        @include var.fz(20);
+        font-weight: bold;
+        margin: 0 auto 10px;
+
+        color: #ea5504;
+    }
+    &__price{
+        text-align: center;
+        margin: 10px 0 0;
+        @include var.fz(16)
+;    }
+    &__blc{
+        background-color: #FFF;
+        padding: 30px;
+        border-radius: 30px;
+        margin: 0 auto 30px;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
     .access__noteblc--txt{
         text-align: center;
     }
@@ -174,6 +197,24 @@
     //goods
     @media screen and (max-width: var.$spbp) {
         width: 100%;
+        &__seal{
+
+            @include var.fz(18);
+            font-weight: bold;
+            margin: 0 auto 10px;
+    
+        }
+        &__price{
+            text-align: center;
+            margin: 10px 0 0;
+            @include var.fz(14)
+    ;    }
+        &__blc{
+            background-color: #FFF;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 auto 16px;
+        }
         .access__noteblc--txt{
             text-align: left;
         }

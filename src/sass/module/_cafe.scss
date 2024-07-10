@@ -5,7 +5,10 @@
 .cafe {
     background: url('../img/bg_cafe.png');
     background-size: 38px 38px;
-
+    img{
+        width: 100%;
+        height: auto;
+    }
     .blc__inner {
         padding: 57px 0;
         position: relative;
@@ -161,8 +164,9 @@
     }
     @media screen and (max-width: var.$spbp) {
         &__blc{
-            padding-right: 3vw;
-            padding-left: 3vw;
+            padding-right: 5vw;
+            padding-left: 5vw;
+            padding-bottom: 3vw;
         }
         &__chara1{
             top: -20vw;
