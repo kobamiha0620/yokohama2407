@@ -22,7 +22,16 @@
         background-size: 100% auto;
         margin: 0 auto 30px;
     }
-
+    &__ttl02 {
+        background: url('../img/ttl_cafe02.png');
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+        white-space: nowrap;
+        width: 470px;
+        height: 48px;
+        background-size: 100% auto;
+        margin: 0 auto 30px;
+    }
     &__blc {
         position: relative;
         background-color: #FFF;
@@ -98,6 +107,11 @@
             height: 8.2vw;
         }
 
+        &__ttl02 {
+            margin: 0 auto 5.8vw;
+            width: 68vw;
+            height: 7.5vw;
+        }
         &__blc {
             padding: 21vw 5vw 8vw;
         }

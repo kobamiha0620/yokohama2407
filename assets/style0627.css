@@ -1915,6 +1915,11 @@
   line-height: 1;
   margin: 8px 0 0;
 }
+.footer__txt {
+  text-align: center;
+  font-size: 0.625rem;
+  line-height: 1.5;
+}
 @media screen and (max-width: 768px) {
   .footer {
     padding: 13.33vw 0 9.6vw;

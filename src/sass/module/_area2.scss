@@ -1487,6 +1487,31 @@
     }
 }
 
+.area{
+    &__time{
+        img{
+            width: 100%;
+            height: auto
+        }
+        a{
+            display: block;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+    &__txt{
+        @include var.fz(16);
+        line-height: 1.5;
+        color: #444;
+
+        a{
+            color: var.$red;
+
+        }
+    }
+}
+
 @include var.webpBg('.area__ttl', var.$imgpath+'ttl_area', 'png');
 @include var.webpBg('#spot1', var.$imgpath+'spot1-icon', 'png');
 @include var.webpBg('#spot2', var.$imgpath+'spot2-icon', 'png');
