@@ -64,6 +64,21 @@ h3{
             animation-duration: 3s;
         }
     } 
+    &__special{
+        max-width: 700px;
+        margin: 80px auto 0;
+        width: 100%;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        @media screen and (max-width: var.$spbp) {
+            max-width: 84vw;
+            margin: 10vw auto 0;
+    
+        }
+
+    }
 }
 
 
