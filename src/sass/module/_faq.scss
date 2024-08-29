@@ -53,6 +53,12 @@
         &--txt{
             margin: 0;
             @include var.fz(14);
+            &.big{
+                @include var.fz(18);
+            }
+            &.best{
+                margin-bottom: 20px;
+            }
             &-list{
                 @include var.fz(14);
                 margin: 0.8em 0;
