@@ -1,0 +1,156 @@
+@use "./module/variable"as var;
+
+
+
+.popup{
+    background-color: #FFF000;
+    &__notice{
+      background-color: #FFF;
+      border: solid 3px red;
+      border-radius: 6px;
+      padding: 20px 10px;
+      margin: -50px auto 80px;
+
+      @media screen and (max-width: var.$spbp) {
+        margin: -50px auto 80px;
+
+      }
+    }
+    &__notice--ttl{
+      text-align: center;
+      @include var.fz(16);
+      font-weight: bold;
+      color: red;
+      text-decoration: underline;
+    }
+    &__notice--txt{
+      text-align: center;
+      @include var.fz(14);
+    }
+    &__notice--list{
+      margin: 0 10px;
+      padding: 0!important;
+      text-align: center;
+      li{
+        list-style-type: none;
+        @include var.fz(15);
+        padding: 8px 0;
+        margin: 0;
+        border-bottom: dashed 1px #CCC;
+        &:first-child{
+          border-top: dashed 1px #CCC;
+        }
+        @media screen and (max-width: var.$spbp) {
+          @include var.fz(13);
+        }
+      }
+    }
+    &__fv{
+      margin: 0 auto 80px;
+    }
+    &__ttl{
+      text-align: center;
+      color:#E74291;
+      @include var.fz(30);
+    }
+    &__inner{
+      padding: 100px 0;
+      width: 600px;
+      margin: 0 auto;
+      @media screen and (max-width: var.$spbp) {
+        padding: 60px 5vw;
+        width: 100%;
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__img{
+      max-width: 600px;
+      margin: 0 auto 20px;
+      @media screen and (max-width: var.$spbp) {
+        margin-bottom: 10px;
+      }
+    }
+    &__td--ttl{
+      font-weight: bold;
+      background-color: #000;
+      color: #FFF;
+      padding: 0 10px;
+      min-width: 5.5em;
+      max-width: 5.5em;
+      text-align: center;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include var.fz(16);
+
+      @media screen and (max-width: var.$spbp) {
+        @include var.fz(14);
+      }
+
+    }
+    &__td{
+      display: flex;
+      margin: 0 auto 10px;
+      align-items: ceter;
+      @include var.fz(16);
+
+      @media screen and (max-width: var.$spbp) {
+        @include var.fz(14);
+      }
+    }
+    &__feature{
+      margin: 0 auto 60px;
+    }
+
+    &__present{
+      margin: 30px 0 10px;
+    }
+    &__note--block{
+      @media screen and (max-width: var.$spbp) {
+      }
+
+    }
+    &__note{
+      text-indent: -1em;
+      padding-left: 1em;
+      @include var.fz(13);
+      line-height: 1.4;
+      margin:0 0 0 5px;
+      @media screen and (max-width: var.$spbp) {
+        @include var.fz(11);
+
+      }
+    }
+    &__subttl{
+      @include var.fz(18);
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.8;
+      letter-spacing: 0.06em;
+      span{
+        color:#E74291;
+      }
+      @media screen and (max-width: var.$spbp) {
+        @include var.fz(14);
+        line-height: 1.5;
+        text-align:left;
+        br{
+          display: none;
+        }
+      }
+    }
+    &__x{
+      width: 80%;
+      display: block;
+      margin: 40px auto 0;
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+}
+
+@include var.webpBg('.access__ttl', var.$imgpath+'ttl_access', 'png');

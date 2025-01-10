@@ -260,11 +260,11 @@ h3{
         &--close{
             @include var.bg;
             background-image: url('../img/close.svg');
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             position: absolute;
-            right: 16px;
-            top: 16px;
+            right: -26px;
+            top: 3px;
             cursor: pointer;
         }
     }

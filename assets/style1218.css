@@ -3363,6 +3363,44 @@
 .popup {
   background-color: #FFF000;
 }
+.popup__notice {
+  background-color: #FFF;
+  border: solid 3px red;
+  border-radius: 6px;
+  padding: 20px 10px;
+  margin: 0 auto 80px;
+}
+.popup__notice--ttl {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: red;
+  text-decoration: underline;
+}
+.popup__notice--txt {
+  text-align: center;
+  font-size: 0.875rem;
+}
+.popup__notice--list {
+  margin: 0 10px;
+  padding: 0 !important;
+  text-align: center;
+}
+.popup__notice--list li {
+  list-style-type: none;
+  font-size: 0.9375rem;
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: dashed 1px #CCC;
+}
+.popup__notice--list li:first-child {
+  border-top: dashed 1px #CCC;
+}
+@media screen and (max-width: 768px) {
+  .popup__notice--list li {
+    font-size: 0.8125rem;
+  }
+}
 .popup__fv {
   margin: 0 auto 80px;
 }

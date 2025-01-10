@@ -1,21 +1,18 @@
-<!-- <%
-// 以下の設定値を記入のこと
-
+<%
 var pageinit = {
   title : '' ,
   keywords : '' ,
   description : '' ,
   ogurl : '' ,
-  path: '',
+  path: './',
   ogimage : '' ,
-  path : '' ,
-  category : ['about'] ,
+  category : ['campaign'] ,
   pagename : '',
   css: [],
   js:[],
-  jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();']
+  // jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();']
 };
-%> -->
+%> 
 
 
     
@@ -69,7 +66,7 @@ var pageinit = {
   <%- include('./module/campaignheader'); %>
 
 
-  <%- include('./module/footer'); %>
+  <%- include(pageinit.path + 'module/footer', { pageinit:pageinit }) %>
 
   <script src="./assets/model0919.js"></script>
 
